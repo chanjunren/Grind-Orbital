@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/drawer" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Home">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg"
+        tools:context=".Home">
+
+        <ImageView
+            android:id="@+id/income_habitat_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/income_habitat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quests_page"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/expenditure_habitat_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/expenditure_habitat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/quests_page"
+            android:layout_width="98dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/quest_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expenditure_habitat_pic" />
+
+        <ImageView
+            android:id="@+id/income_habitat"
+            android:layout_width="99dp"
+            android:layout_height="97dp"
+            app:layout_constraintBottom_toBottomOf="@+id/income_habitat_pic"
+            app:layout_constraintEnd_toEndOf="@+id/income_habitat_pic"
+            app:layout_constraintHorizontal_bias="0.395"
+            app:layout_constraintStart_toStartOf="@+id/income_habitat_pic"
+            app:layout_constraintTop_toTopOf="@+id/income_habitat_pic"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/empty" />
+
+        <ImageView
+            android:id="@+id/expenditure_habitat"
+            android:layout_width="99dp"
+            android:layout_height="97dp"
+            app:layout_constraintBottom_toBottomOf="@+id/expenditure_habitat_pic"
+            app:layout_constraintEnd_toEndOf="@+id/expenditure_habitat_pic"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/expenditure_habitat_pic"
+            app:layout_constraintTop_toTopOf="@+id/expenditure_habitat_pic"
+            app:layout_constraintVertical_bias="0.421"
+            app:srcCompat="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+
+            android:text="INCOME"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/income_habitat"
+            app:layout_constraintEnd_toEndOf="@+id/income_habitat_pic"
+            app:layout_constraintStart_toStartOf="@+id/income_habitat_pic"
+            app:layout_constraintTop_toTopOf="@+id/income_habitat_pic" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="EXPENDITURE"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/expenditure_habitat_pic"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="@+id/expenditure_habitat_pic"
+            app:layout_constraintTop_toTopOf="@+id/expenditure_habitat_pic" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUESTS"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/quests_page"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="@+id/quests_page"
+            app:layout_constraintTop_toBottomOf="@+id/quests_page" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/bluedark"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:menu="@menu/drawer_menu">
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

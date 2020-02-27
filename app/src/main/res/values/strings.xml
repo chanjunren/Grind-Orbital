@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Grind_JR</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string-array name="quest_enums">
+        <item>Daily</item>
+        <item>Main</item>
+    </string-array>
+    <string-array name="income_cats">
+        <item>Salary</item>
+        <item>Investment</item>
+        <item>Pocket Money</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="expenditure_cats">
+        <item>Transport</item>
+        <item>Food</item>
+        <item>Bills</item>
+        <item>Entertainment</item>
+        <item>Others</item>
+    </string-array>
+</resources>
